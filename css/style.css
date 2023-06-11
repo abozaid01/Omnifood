@@ -307,6 +307,7 @@
     background-color: #fdf2e9;
     display: grid;
     grid-template-columns: 55fr 45fr; /*think of as %*/
+    align-items: center;
 }
 
 .testimonials-container {
@@ -342,7 +343,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.6rem;
     padding: 1.6rem;
-    align-items: center;
 }
 
 .gallery-item {
