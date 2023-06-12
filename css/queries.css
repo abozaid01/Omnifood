@@ -1,5 +1,5 @@
 /* rem and em do NOT depend on html font-size in media query
-Instead, 1rem = 1em = 15px */
+Instead, 1rem = 1em = 16px */
 
 /**********************************/
 /* Below 1344px (Smaller Desktop) */
@@ -53,5 +53,125 @@ Instead, 1rem = 1em = 15px */
 
     .testimonials-container {
         padding: 9.6rem 3.2rem;
+    }
+}
+
+/**********************************/
+/* Below 940px (Tablets) */
+/*********************************/
+@media (max-width: 59em) {
+    html {
+        font-size: 50%; /* 8px */
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 0 8rem;
+        gap: 6.4rem;
+    }
+
+    .hero-text-box,
+    .hero-img-box {
+        text-align: center;
+    }
+
+    .deliverd-meals {
+        justify-content: center;
+        margin-top: 3.2rem;
+    }
+
+    .hero-img {
+        width: 60%;
+    }
+
+    .logos img {
+        height: 2.4rem;
+    }
+
+    .step-number {
+        font-size: 7.4rem;
+    }
+
+    .meal-content {
+        padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+    }
+
+    .section-testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .CTA {
+        /* grid-template-columns: 60fr 40fr; */
+        grid-template-columns: 3fr 2fr; /* 3/5=>60%, 2/5=>40% */
+    }
+
+    .CTA-form {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-form {
+        margin-top: 1.2rem;
+    }
+
+    /* MOBILE - NAV */
+    .btn-mobile-nav {
+        display: block;
+    }
+
+    .main-nav {
+        background-color: rgba(255, 255, 255, 0.97);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease-in;
+        transform: translateX(
+            100%
+        ); /* use translate of right instead, because of transition*/
+
+        /* Steps to hide navigation: */
+
+        /* 1) Hide it visually */
+        /* display: none; */ /* No Transition ): */ /* if you choose this, then no need to the following steps */
+        opacity: 0;
+
+        /* 2) Make it unaccessible to mouse and keyboard */
+        pointer-events: none;
+
+        /* 3) Hide it from screen reader */
+        visibility: hidden;
+    }
+
+    .nav-open .main-nav {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .nav-open .icon-mobile-nav[name="close-outline"] {
+        display: block;
+    }
+
+    .nav-open .icon-mobile-nav[name="menu-outline"] {
+        display: none;
+    }
+
+    .main-nav-list {
+        flex-direction: column;
+        gap: 4.8rem;
+    }
+
+    .main-nav-link:link,
+    .main-nav-link:visited {
+        font-size: 3rem;
     }
 }
