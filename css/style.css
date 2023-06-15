@@ -60,6 +60,7 @@
     background: none;
     cursor: pointer;
     display: none;
+    z-index: 99999;
 }
 
 .icon-mobile-nav {
