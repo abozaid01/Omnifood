@@ -122,11 +122,20 @@
                         </div>
                     </div>
                     <div class="hero-img-box">
-                        <img
-                            src="img/hero.png"
-                            alt="Woman enjoying food, meals in storage container, and food bowls on a table"
-                            class="hero-img"
-                        />
+                        <!-- browser will select the best fit for the current device -->
+                        <picture>
+                            <source srcset="img/hero.webp" type="image/webp" />
+                            <source
+                                srcset="img/hero-min.png"
+                                type="image/png"
+                            />
+                            <!-- write the src .png (all browsers support it) -->
+                            <img
+                                src="img/hero-min.png"
+                                alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+                                class="hero-img"
+                            />
+                        </picture>
                     </div>
                 </div>
             </section>
